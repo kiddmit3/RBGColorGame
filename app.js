@@ -42,12 +42,12 @@ function init(){
 }
 
 
-
 function setupModeButtons(){
 	for (var i=0; i<modeButtons.length;i++){
 	modeButtons[i].addEventListener("click", function(){
 		modeButtons[0].classList.remove("selected");
 		modeButtons[1].classList.remove("selected");
+		modeButtons[2].classList.remove("selected");
 		this.classList.add("selected");
 		if(this.textContent === "Easy"){
 			numOfSquares = 3;
@@ -75,7 +75,7 @@ for (var i = 0; i< squares.length; i++) {
 		messageDisplay.textContent = "Correct!";
 		changeColors(clickedColor);
 		h1.style.background = clickedColor;
-		resetButton.textContent = "Play Again?";
+		resetButton.textContent = "Again?";
 	} else {
 		this.style.background = "#232323";
 		messageDisplay.textContent = "Try Again";
@@ -85,7 +85,7 @@ for (var i = 0; i< squares.length; i++) {
 }
 
 function reset(){
-	resetButton.textContent = "New Colors";
+	resetButton.textContent = "Reset";
 	//generate all new colors
 	colors = generateRandomColors(numOfSquares);
 	//pick a random color from array
