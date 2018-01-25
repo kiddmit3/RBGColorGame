@@ -124,7 +124,7 @@ button:hover {
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 460px) {
 
 	#colorDisplay{
 		font-size: 130%;
